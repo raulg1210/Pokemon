@@ -1,0 +1,49 @@
+body{
+    background-image: url(./img/fondo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header{
+    background-image: url(./img/header.jpeg);
+    opacity: 50%;
+    height: 270px;
+}
+#tituloheader{
+    background-color: black;
+    opacity: 60%;
+    color: white;
+    text-align: center;
+}
+#textoheader{
+    text-align: center;
+    color: white;
+    
+}
+.container{
+    box-shadow: beige;
+    box-sizing: border-box;
+    background-color: black;
+    opacity: 80%;
+}
+.borde{
+    border-width: thick;
+    border-radius: 4px;
+}
+.fondo-card{
+    background-color: black;
+    border-radius: 4px;
+    border: white;
+    text-align: center;
+}
+.medida{
+    width: 50px;
+    height: 30px;
+}
+.textoopaco{
+    opacity: 50%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+footer{
+    background-color: gray;
+    opacity: 90%;
+}
