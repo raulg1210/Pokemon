@@ -32,18 +32,16 @@
 			<body>
 				<div class="container">
 					<header class="d-flex flex-column justify-content-center">
-						<div id="tituloheader">
+						<div id="tituloheader" class="bg-dark">
 							<h1 class="m-0">POKEDEX</h1>
 						</div>
+						<xsl:for-each select="pokedex">
 						<div id="textoheader">
 							<p class="m-0">
-								Los Pokémon son criaturas de todo tipo de formas y tamaños que viven bien en un medio salvaje o junto
-								a los seres humanos. Los dueños de los Pokémon (denominados “Entrenadores”) los crían y los cuidan.
-								Durante sus aventuras, los Pokémon crecen y adquieren más experiencia, e incluso, en ocasiones,
-								evolucionan para convertirse en Pokémon más fuertes. En la actualidad, hay más de 700 criaturas que
-								habitan el universo Pokémon.
+								<xsl:value-of select="definition" />
 							</p>
 						</div>
+						</xsl:for-each>
 					</header>
 					
 					<h1 class="text-center text-light textoopaco"><strong> TYPES</strong></h1>
@@ -60,13 +58,13 @@
 					<h1 class="text-center text-light textoopaco"><strong> POKEMONS</strong></h1>
 					<div class="row justify-content-center">
 						<xsl:for-each select="pokedex/pokemon">
-							<div class="col-lg-6 mb-3">
-								<div class="card-body fondo-card text-center border border-white rounded">
+							<div class="col-lg-6 mb-3 d-flex">
+								<div class="card-body fondo-card text-center border border-white rounded flex-fill">
 									<div class="row">
-										<div class="col-5">
+										<div class="col-6">
 											<img src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/{dex}.png" alt=""/>
 										</div>
-										<div class="col-7">
+										<div class="col-6">
 											<div class="card-body">
 												<h4 class="card-title text-light"><xsl:value-of select="species" /></h4>
 												<p class="card-text text-light">
